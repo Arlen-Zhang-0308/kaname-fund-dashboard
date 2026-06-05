@@ -1,4 +1,4 @@
-const DEFAULT_ALLOWED_ORIGINS = ['https://trymuseai.im'];
+const DEFAULT_ALLOWED_ORIGINS = ['*'];
 
 function getAllowedOrigins() {
   const configured = process.env.ALLOWED_ORIGINS?.split(',')
@@ -10,13 +10,18 @@ function getAllowedOrigins() {
 
 export function corsHeaders(origin: string | null) {
   const allowedOrigins = getAllowedOrigins();
-  const allowedOrigin = origin && allowedOrigins.includes(origin) ? origin : allowedOrigins[0];
+  const allowAll = allowedOrigins.includes('*');
+  const allowedOrigin = allowAll
+    ? '*'
+    : origin && allowedOrigins.includes(origin)
+      ? origin
+      : allowedOrigins[0];
 
   return {
     'Access-Control-Allow-Origin': allowedOrigin,
     'Access-Control-Allow-Methods': 'GET, OPTIONS',
     'Access-Control-Allow-Headers': 'Content-Type, Authorization',
-    'Vary': 'Origin'
+    'Vary': allowAll ? 'Access-Control-Request-Headers' : 'Origin'
   };
 }
 
