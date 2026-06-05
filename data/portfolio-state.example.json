@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0-example",
+  "updated_at": "2026-06-05 00:00:00",
+  "currency": "CNY",
+  "current_total_cost": 10000,
+  "current_total_amount": 10280,
+  "holding_total_pnl": 280,
+  "sold_realized_pnl": 120,
+  "calculation_notes": {
+    "public_repo_notice": "This is example data only. Real portfolio data must be supplied by PORTFOLIO_STATE_JSON in Vercel environment variables."
+  },
+  "holdings": [
+    {
+      "code": "DEMO001",
+      "name": "示例主计划基金",
+      "asset_type": "fund",
+      "portfolio_layer": "main_plan",
+      "industry": "示例行业 / 主计划",
+      "units": 1000,
+      "unit_label": "份",
+      "cost_unit_price": 1,
+      "cost_amount": 1000,
+      "current_unit_price": 1.08,
+      "current_amount": 1080,
+      "unrealized_pnl": 80,
+      "unrealized_pnl_rate": 0.08,
+      "current_amount_weight": 0.1051,
+      "price_source": "example",
+      "price_updated_at": "2026-06-05",
+      "note": "公开仓库示例数据，不代表真实持仓。"
+    },
+    {
+      "code": "DEMO002",
+      "name": "示例独立追踪资产",
+      "asset_type": "fund",
+      "portfolio_layer": "independent_tracking",
+      "industry": "示例行业 / 独立追踪",
+      "units": 3000,
+      "unit_label": "份",
+      "cost_unit_price": 3,
+      "cost_amount": 9000,
+      "current_unit_price": 3.0667,
+      "current_amount": 9200,
+      "unrealized_pnl": 200,
+      "unrealized_pnl_rate": 0.0222,
+      "current_amount_weight": 0.8949,
+      "price_source": "example",
+      "price_updated_at": "2026-06-05",
+      "note": "公开仓库示例数据，不代表真实持仓。"
+    }
+  ],
+  "sold_positions": [
+    {
+      "code": "DEMO-SOLD",
+      "name": "示例已卖出观察",
+      "asset_type": "fund",
+      "portfolio_layer": "sold_record",
+      "industry": "示例行业 / 已卖出",
+      "sold_units": 100,
+      "unit_label": "份",
+      "cost_amount": 1000,
+      "proceeds_amount": 1120,
+      "sell_unit_price": 11.2,
+      "realized_pnl": 120,
+      "realized_pnl_rate": 0.12,
+      "sell_date": "2026-06-05",
+      "price_source": "example",
+      "price_updated_at": "2026-06-05",
+      "note": "公开仓库示例数据，不代表真实交易。"
+    }
+  ]
+}
