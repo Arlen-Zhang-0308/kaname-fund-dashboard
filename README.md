@@ -1,5 +1,7 @@
 # Kaname Fund Dashboard
 
+[English](README.md) | [简体中文](README.zh-CN.md)
+
 A Next.js/Vercel fund dashboard service. This public repository contains only application code and non-sensitive example data.
 
 ## Security boundary
